@@ -87,7 +87,7 @@ This appears to be the more reliable model.
 
 
 ## SUMMARY
-Lastly, we share the insights into our results to summarize. For the XGBoost model, predicting stock market data did not produce the best results. This Implies that the stock market data is difficult to predict
+Lastly, we share the insights into our results to summarize. For the XGBoost model, predicting stock market data did not produce the best results. This Implies that the stock market data is difficult to predict.
 
 - **XGBoost**
   - The model was definitely not the best for predicting stock market data. 
@@ -100,5 +100,6 @@ Lastly, we share the insights into our results to summarize. For the XGBoost mod
 
 
 ## POSSIBLE TECHNIQUES THAT CAN IMPROVE THE ACCURACY
-- **Hyperparameter Tuning** 
-- **Stacking models**
+- Updating the classification model with PySpark would give a better overview of the performance of the model 
+- **Hyperparameter Tuning** can improve the accuracy for the classification model 
+- **Stacking models** with different models can be used to produce better and more accurate predictions
