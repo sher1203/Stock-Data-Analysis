@@ -62,13 +62,18 @@ DTW is uses the nearest neighbour in the comparison sequence at each inde
 
 
 ### Dataset Overview
+<img width="443" alt="Screen Shot 2021-05-02 at 10 34 08 PM" src="https://user-images.githubusercontent.com/43936803/116825199-dca24c00-ab96-11eb-9554-4ad874f00417.png">
 
 - Most stocks increase, some are stagnant, very few decrease = 3 clusters
 
 ### Number of Models 
 - Two models: one with normalized data, one with standardized data
 
+<img width="783" alt="Screen Shot 2021-05-02 at 10 33 38 PM" src="https://user-images.githubusercontent.com/43936803/116825135-977e1a00-ab96-11eb-8d9b-2e0a72879e80.png">
+
 ### Standardized Data and Normalized Data
+
+<img width="855" alt="Screen Shot 2021-05-02 at 10 34 02 PM" src="https://user-images.githubusercontent.com/43936803/116825155-a49b0900-ab96-11eb-8d45-f670435e2414.png">
 
 - *_Standardized model_*
   - **Cluster 0**: stocks are rising 
