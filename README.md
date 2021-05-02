@@ -61,49 +61,43 @@ We found incomplete records for training and testing data.
 DTW is uses the nearest neighbour in the comparison sequence at each inde
 
 
-### RANDOM FOREST
+### Dataset Overview
 
-- Random Forest tends **not to overfit the data**
-- Tuning parameters is simple and fast.
-- Convenient for feature selection
-- Moderate validation accuracy: **64% overall**
-- Difficult to interpret the model and re-engineer the model/data
+- Most stocks increase, some are stagnant, very few decrease = 3 clusters
 
-<img width="635" alt="Screen Shot 2021-04-25 at 5 06 59 PM" src="https://user-images.githubusercontent.com/43936803/115996698-0bde1980-a5e9-11eb-8d63-d1148cc00334.png">
+### Number of Models 
+- Two models: one with normalized data, one with standardized data
 
-### SUPPORT VECTOR MACHINE
+### Standardized Data and Normalized Data
 
-#### GAUSSIAN KERNEL
-- High validation accuracy: **88% overall**
-- **Overfits the training data**: the model explained random noises in the training data
-- Poor prediction result on Kaggle
+- *_Standardized model_*
+  - **Cluster 0**: stocks are rising 
+  - **Cluster 1**: stocks are stagnant
+  - **Cluster 2**: stagnant at first, but late 2019 there is a spike(which is interesting since the pandemic starts somewhere around then).
 
-#### LINEAR KERNEL
-- Moderate validation accuracy: **83% overall**
-- Moderately fast tuning by grid searching
-- Low accuracy in less dominant labels
+This appears to be the more reliable model.
 
+- *_Normalized model_*
+**Cluster 0**: messy - may not have trained well. Can see some rising stocks, but also some that don’t, and some that are volatile
+**Cluster 1**: rising stocks
+**Cluster 2**: 1 decreasing stock
 
-### XGBOOST
-
-- Xgboost is a more efficient implementation of Gradient Boosting
-- Xgboost multiclass model: **soft-max**
-- Evaluation metric: **mlogloss**
-- Encode categorical variables to multiple binary variables
-- High validation accuracy: **84%**
+- The standardized model appears to be the more reliable model 
 
 
 
-## SUMMARY 
+## SUMMARY
+Lastly, we share the insights into our results to summarize. For the XGBoost model, predicting stock market data did not produce the best results. This Implies that the stock market data is difficult to predict
 
-- Key Variables: 
-  - chromosome_interac (our engineered variable)
-  - Intracellular transport (binary variable)
-- The model pathway : **RandomForest -> SVM Gaussian -> SVM linear -> XGBoost**
-- Our best performing models were XGBoost and SVM Linear kernel. 
-- From XGBoost, we learned that regularization is key to combat overfitting
-- **Final Result: 61% accuracy**
-- Model could be **underfit for the data**
+- **XGBoost**
+  - The model was definitely not the best for predicting stock market data. 
+  Stock market data is difficult to predict.
+- **K-Means Clustering**
+  - Picking stocks for a portfolio that generally increases based on clusters may be more reliable than training a model that predicts the stock price.
+
+
+
+
 
 ## POSSIBLE TECHNIQUES THAT CAN IMPROVE THE ACCURACY
 - **Hyperparameter Tuning** 
