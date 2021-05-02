@@ -19,7 +19,6 @@ Analyzed and predicted stock prices from two datasets using both supervised and 
 ---------------------------------------------------------------------------------------------------------------
 
 
-The goal was to predict the class of ~380 observations (proteins) in the test file. The data were messy, and had missing values. It was also not obvious how to include information from the additional file Protein_interactions.csv, into the training data.
 
 ## XGBOOST
 
