@@ -21,7 +21,7 @@ Analyzed Stock data set using both supervised and unsupervised Machine learning 
 
 The goal was to predict the class of ~380 observations (proteins) in the test file. The data were messy, and had missing values. It was also not obvious how to include information from the additional file Protein_interactions.csv, into the training data.
 
-## DATA PREPROCESSING
+## XGBOOST
 
 ### INCOMPLETE RECORDS
 
@@ -51,7 +51,7 @@ Incomplete variables were also present.
 - Dominant Interaction Type (Performance: **Low**)
   - Most popular interaction type for each protein
 
-## MODEL PROPOSAL
+## CLUSTERING MODELS
 - Random Forest
 - Support Vector Machine
 - XGBoost
