@@ -23,38 +23,44 @@ The goal was to predict the class of ~380 observations (proteins) in the test fi
 
 ## XGBOOST
 
-### INCOMPLETE RECORDS
+### SCOPE
 
-<img width="390" alt="Screen Shot 2021-04-25 at 5 16 07 PM" src="https://user-images.githubusercontent.com/43936803/115996967-0d5c1180-a5ea-11eb-874a-b73ac09ef41c.png">
+- XGBoost was used as a classification model
+- Avoids **overfitting** by its regularization parameters
+- Can deal with missing values and NaN values
+
+### Methodology
+
+- Predicted the closing price for the next 14 days on the validation data during training.
+- Made predictions on holdout testing data.
+
+### Observations
+
+- We used **Root Mean Squared Error (RMSE)** function to check for prediction errors. Our calculations showed an average RMSE of 30 for all the stocks with the maximum reaching 77 for an individual stock.
+- Validation prediction results sometimes varied by a big margin as it produced a RMSE very different from what we got in the testing data. For instance, TITAN, a stock in the dataset, had a difference of **47** in RMSE.
+
+
+
 
 We found incomplete records for training and testing data.
 
 **Training data -> 5.21%**
 **Testing data -> 19.37%**
 
-Incomplete variables were also present.
+### Interpretation 
 
-- Chromosome
-- Essential
-
-### FEATURE ENGINEERING
-
-- Sum of binary variables
-  - Summarize the 442 binary variables by sum where True -> 1
-
-- Dummy Variables  (Performance: **High**)
-  -Converted Chromosome, Essential, and Interaction Type into Binary Variable columns
-
-- Average Interaction Strength (Performance: **High**)
-  - Average of all interaction strengths for each protein
-
-- Dominant Interaction Type (Performance: **Low**)
-  - Most popular interaction type for each protein
+- For good predictions, RMSE is usually in the range 0.2-0.5.
+- RMSE was very high on training compared to testing which indicates that the model did not learn the training distribution well.
+- A more complex model could reduce underfitting
 
 ## CLUSTERING MODELS
-- Random Forest
-- Support Vector Machine
-- XGBoost
+
+- Time series k-means with Dynamic Time Warping
+- Why use DTW instead of Euclidean?
+
+- Euclidean doesn’t work well if the time series lengths are mismatched
+DTW is uses the nearest neighbour in the comparison sequence at each inde
+
 
 ### RANDOM FOREST
 
