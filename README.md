@@ -1,5 +1,5 @@
 # Stock-Data-Analysis
-Analyzed Stock data set using both supervised and unsupervised Machine learning techniques using PySpark
+Analyzed and predicted stock prices from two datasets using both supervised and unsupervised Machine Learning techniques using PySpark
 
 ## Table of Contents  
 - [XGBoost](#xgboost)      
