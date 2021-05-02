@@ -57,8 +57,7 @@ We found incomplete records for training and testing data.
 
 - Time series k-means with Dynamic Time Warping
 - Why use DTW instead of Euclidean?
-
-- Euclidean doesn’t work well if the time series lengths are mismatched
+  - Euclidean doesn’t work well if the time series lengths are mismatched
 DTW is uses the nearest neighbour in the comparison sequence at each inde
 
 
