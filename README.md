@@ -41,10 +41,7 @@ Analyzed and predicted stock prices from two datasets using both supervised and 
 
 
 
-We found incomplete records for training and testing data.
 
-**Training data -> 5.21%**
-**Testing data -> 19.37%**
 
 ### Interpretation 
 
